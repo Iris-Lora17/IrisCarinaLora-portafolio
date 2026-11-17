@@ -1,0 +1,1807 @@
+
+/* =========================================
+   VARIABLES DE DISEÑO
+========================================= */
+
+:root {
+    --color-fondo: #100d29;
+    --color-violeta: #bd63f5;
+    --color-lavanda: #e5a4ff;
+    --color-blanco: #ffffff;
+}
+
+/* =========================================
+   ESTILOS GENERALES
+========================================= */
+
+
+body {
+    background-color: var(--color-fondo);
+    color: var(--color-blanco);
+    font-family: 'Poppins', sans-serif;
+    padding-top: 75px;
+
+}
+
+
+/* =========================================
+   NAVBAR
+========================================= */
+
+.navbar-portfolio {
+    background: rgba(15, 11, 39, 0.96);
+    border-bottom: 1px solid rgba(189, 99, 245, 0.5);
+    box-shadow: 0 3px 20px rgba(189, 99, 245, 0.15);
+    backdrop-filter: blur(12px);
+    min-height: 75px;
+}
+
+/* LOGO */
+
+.navbar-brand {
+    display: flex;
+    align-items: center;
+    gap: 7px;
+}
+
+.logo-icon {
+    font-size: 35px;
+    color: var(--color-violeta);
+}
+
+.brand-name {
+    font-weight: 700;
+    color: white;
+}
+
+.brand-divider,
+.brand-subtitle {
+    color: #d5c8e9;
+}
+
+/* ENLACES */
+
+.navbar-portfolio .nav-link {
+    color: white;
+    font-size: 14px;
+    margin: 0 7px;
+    transition: 0.3s ease;
+}
+
+.navbar-portfolio .nav-link:hover,
+.navbar-portfolio .nav-link.active {
+    color: var(--color-lavanda);
+}
+
+/* BOTÓN DEL TEMA */
+
+.theme-toggle {
+    border: none;
+    border-radius: 25px;
+    background: #39245d;
+    color: var(--color-lavanda);
+    padding: 7px 13px;
+    cursor: pointer;
+}
+
+/* BOTÓN CV */
+
+.btn-cv {
+    background: var(--color-violeta);
+    color: #160d29;
+    border-radius: 25px;
+    padding: 9px 18px;
+    font-weight: 700;
+    transition: 0.3s ease;
+}
+
+.btn-cv:hover {
+    background: var(--color-lavanda);
+    color: #160d29;
+    transform: translateY(-2px);
+}
+
+/* =========================================
+   SECCIÓN DE INICIO
+========================================= */
+
+.seccion-presentacion {
+    min-height: calc(100vh - 75px);
+    display: flex;
+    align-items: center;
+    position: relative;
+    overflow: hidden;
+    padding: 80px 0;
+
+    background:
+        radial-gradient(
+            circle at 80% 45%,
+            rgba(104, 54, 160, 0.20),
+            transparent 38%
+        ),
+        var(--color-fondo);
+}
+
+/* CONTENEDOR PRINCIPAL */
+
+.contenedor-presentacion {
+    position: relative;
+    z-index: 1;
+}
+
+/* CONTENIDO DE PRESENTACIÓN */
+
+.contenido-presentacion {
+    padding-top: 20px;
+    padding-bottom: 20px;
+}
+
+/* SUBTÍTULO */
+
+.subtitulo-presentacion {
+    display: inline-block;
+    color: var(--color-lavanda);
+    font-size: 16px;
+    font-weight: 600;
+    letter-spacing: 2px;
+    margin-bottom: 22px;
+}
+
+/* TÍTULO PRINCIPAL */
+
+.contenido-presentacion h1 {
+    color: var(--color-blanco);
+    font-size: clamp(38px, 5vw, 60px);
+    font-weight: 700;
+    line-height: 1.2;
+    margin-bottom: 15px;
+}
+
+/* NOMBRE DESTACADO */
+
+.nombre-destacado {
+    color: var(--color-violeta);
+    display: inline-block;
+}
+
+/* PROFESIÓN */
+
+.contenido-presentacion h2 {
+    color: #e5d8f5;
+    font-size: clamp(23px, 3vw, 32px);
+    font-weight: 500;
+    margin-bottom: 22px;
+}
+
+/* DESCRIPCIÓN */
+
+.descripcion-presentacion {
+    color: #c9c2d8;
+    font-size: 16px;
+    line-height: 1.8;
+    max-width: 520px;
+    margin-bottom: 30px;
+}
+
+/* BOTONES */
+
+.botones-presentacion {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 15px;
+    margin-bottom: 35px;
+}
+
+/* BOTÓN PRINCIPAL */
+
+.btn-primary-custom {
+    background-color: var(--color-violeta);
+    color: #160d29;
+    border: 2px solid var(--color-violeta);
+    border-radius: 30px;
+    padding: 12px 24px;
+    font-weight: 600;
+    transition: all 0.3s ease;
+}
+
+.btn-primary-custom:hover {
+    background-color: var(--color-lavanda);
+    border-color: var(--color-lavanda);
+    color: #160d29;
+    transform: translateY(-3px);
+}
+
+/* BOTÓN SECUNDARIO */
+
+.btn-outline-custom {
+    background-color: transparent;
+    color: var(--color-lavanda);
+    border: 2px solid var(--color-violeta);
+    border-radius: 30px;
+    padding: 12px 24px;
+    font-weight: 600;
+    transition: all 0.3s ease;
+}
+
+.btn-outline-custom:hover {
+    background-color: var(--color-violeta);
+    color: #160d29;
+    transform: translateY(-3px);
+}
+
+/* REDES SOCIALES */
+
+.redes-sociales {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 25px;
+}
+
+.redes-sociales a {
+    color: #c9c2d8;
+    text-decoration: none;
+    font-size: 15px;
+    font-weight: 500;
+    transition: color 0.3s ease;
+}
+
+.redes-sociales a:hover {
+    color: var(--color-lavanda);
+}
+
+/* ADAPTACIÓN A TABLET */
+
+@media (max-width: 991px) {
+
+    .seccion-presentacion {
+        min-height: auto;
+        padding: 70px 0;
+        text-align: center;
+    }
+
+    .contenido-presentacion {
+        padding: 20px;
+    }
+
+    .descripcion-presentacion {
+        margin-left: auto;
+        margin-right: auto;
+    }
+
+    .botones-presentacion,
+    .redes-sociales {
+        justify-content: center;
+    }
+}
+
+/* ADAPTACIÓN A CELULARES */
+
+@media (max-width: 576px) {
+
+    .seccion-presentacion {
+        padding: 50px 0;
+    }
+
+    .botones-presentacion {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .botones-presentacion a {
+        width: 100%;
+        max-width: 250px;
+    }
+}
+
+/* =========================================
+   ILUSTRACIÓN DE LA PRESENTACIÓN
+========================================= */
+
+.imagen-presentacion {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    position: relative;
+    padding: 0;
+}
+
+/* IMAGEN DE LAPTOP Y GATITO */
+/* ILUSTRACIÓN INTEGRADA AL FONDO */
+
+.imagen-presentacion img {
+    display: block;
+    width: 100%;
+    height: auto;
+    object-fit: contain;
+    border-radius: 0;
+
+    filter:
+        brightness(0.90)
+        saturate(0.65)
+        drop-shadow(0 0 25px rgba(189, 99, 245, 0.12));
+    
+-webkit-mask-image: radial-gradient(
+    ellipse 72% 82% at center,
+    #000000 42%,
+    rgba(0, 0, 0, 0.90) 58%,
+    rgba(0, 0, 0, 0.45) 78%,
+    transparent 100%
+);
+
+mask-image: radial-gradient(
+    ellipse 72% 82% at center,
+    #000000 42%,
+    rgba(0, 0, 0, 0.90) 58%,
+    rgba(0, 0, 0, 0.45) 78%,
+    transparent 100%
+);
+
+
+    animation: aparecer-imagen 1.2s ease both;
+}
+
+/* ANIMACIÓN DE APARICIÓN */
+
+@keyframes aparecer-imagen {
+    from {
+        opacity: 0;
+        transform: translateY(20px);
+    }
+
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+/* ADAPTACIÓN A TABLET */
+
+@media (max-width: 991px) {
+
+    .imagen-presentacion {
+        margin-top: 40px;
+        padding: 0 20px;
+    }
+
+    .imagen-presentacion img {
+        max-width: 650px;
+    }
+}
+
+/* ADAPTACIÓN A CELULARES */
+
+@media (max-width: 576px) {
+
+    .imagen-presentacion {
+        margin-top: 25px;
+        padding: 0 10px;
+    }
+}
+
+/* =========================================
+   ESTRELLAS DECORATIVAS DEL INICIO
+========================================= */
+
+.seccion-presentacion::before {
+    content: "";
+    position: absolute;
+    inset: 0;
+    pointer-events: none;
+    z-index: 0;
+
+    background-image:
+        radial-gradient(circle, #ffffff 1px, transparent 2px),
+        radial-gradient(circle, #bd63f5 1.5px, transparent 3px),
+        radial-gradient(circle, #e5a4ff 1px, transparent 2px),
+        radial-gradient(circle, #ffffff 1.5px, transparent 3px);
+
+    background-size:
+        180px 150px,
+        230px 190px,
+        280px 220px,
+        350px 270px;
+
+    background-position:
+        20px 30px,
+        90px 100px,
+        150px 50px,
+        40px 180px;
+
+    opacity: 0.55;
+
+    animation: movimiento-estrellas 45s linear infinite;
+}
+
+/* BRILLO SUAVE DEL FONDO */
+
+.seccion-presentacion::after {
+    content: "";
+    position: absolute;
+    inset: 0;
+    pointer-events: none;
+    z-index: 0;
+
+    background:
+        radial-gradient(
+            circle at 12% 25%,
+            rgba(189, 99, 245, 0.13),
+            transparent 20%
+        ),
+        radial-gradient(
+            circle at 85% 75%,
+            rgba(105, 75, 255, 0.12),
+            transparent 25%
+        );
+
+    animation: brillo-fondo 5s ease-in-out infinite alternate;
+}
+
+@keyframes brillo-fondo {
+    from {
+        opacity: 0.5;
+    }
+
+    to {
+        opacity: 1;
+    }
+}
+
+@keyframes movimiento-estrellas {
+    from {
+        background-position:
+            20px 30px,
+            90px 100px,
+            150px 50px,
+            40px 180px;
+    }
+
+    to {
+        background-position:
+            200px 180px,
+            320px 290px,
+            430px 270px,
+            390px 450px;
+    }
+}
+
+/* =========================================
+   SECCIÓN SOBRE MÍ
+========================================= */
+
+.seccion-sobre-mi {
+    padding: 100px 0;
+    position: relative;
+}
+
+/* TARJETA PRINCIPAL */
+
+.tarjeta-sobre-mi {
+    display: flex;
+    align-items: center;
+    gap: 50px;
+    padding: 45px;
+    background: rgba(35, 22, 67, 0.85);
+    border: 1px solid rgba(189, 99, 245, 0.45);
+    border-radius: 25px;
+    box-shadow: 0 0 30px rgba(189, 99, 245, 0.12);
+}
+
+/* =========================================
+   CONSTELACIÓN DE LEO
+========================================= */
+
+/* CONTENEDOR ESPACIAL */
+
+.ilustracion-espacial {
+    flex: 0 0 40%;
+    min-height: 300px;
+    position: relative;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    overflow: hidden;
+    border-radius: 20px;
+
+    background:
+        radial-gradient(
+            circle at 50% 45%,
+            rgba(189, 99, 245, 0.20),
+            transparent 65%
+        ),
+        #100d29;
+
+    border: 1px solid rgba(189, 99, 245, 0.3);
+    box-shadow: inset 0 0 35px rgba(189, 99, 245, 0.08);
+}
+
+/* CONTENEDOR DE LA CONSTELACIÓN */
+
+.constelacion-leo {
+    width: 100%;
+    min-height: 300px;
+    position: relative;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+/* DIBUJO SVG */
+
+.dibujo-constelacion {
+    width: 100%;
+    height: 270px;
+    overflow: visible;
+}
+
+/* LÍNEAS DORADAS */
+
+.lineas-doradas {
+    fill: none;
+    stroke: #e7c36b;
+    stroke-width: 2;
+    stroke-linecap: round;
+    stroke-linejoin: round;
+    filter: drop-shadow(0 0 3px rgba(231, 195, 107, 0.7));
+}
+
+/* =========================================
+   ESTRELLAS DE LEO
+========================================= */
+
+/* ESTRELLAS PRINCIPALES */
+
+.estrellas-principales {
+    fill: #ffe7a1;
+    filter: drop-shadow(0 0 6px #e7c36b);
+}
+
+/* DESTELLOS GRANDES */
+
+.destellos-dorados {
+    fill: #ffe7a1;
+    filter: drop-shadow(0 0 3px rgba(231, 195, 107, 0.65));
+}
+
+/* ESTRELLAS PEQUEÑAS */
+
+.estrellas-pequenas {
+    fill: #f5d98b;
+    filter: drop-shadow(0 0 4px #e7c36b);
+}
+
+/* LUNA CRECIENTE */
+
+.luna-dorada {
+    fill: #e7c36b;
+    filter: drop-shadow(0 0 6px #e7c36b);
+}
+
+/* =========================================
+   ANIMACIÓN NATURAL DE LA CONSTELACIÓN
+========================================= */
+
+@keyframes brillo-constelacion {
+    0%, 100% {
+        opacity: 0.72;
+    }
+
+    50% {
+        opacity: 1;
+    }
+}
+
+/* ESTRELLAS PRINCIPALES: ritmos independientes */
+
+.estrellas-principales circle:nth-child(1) {
+    animation: brillo-constelacion 5.2s ease-in-out infinite;
+}
+
+.estrellas-principales circle:nth-child(2) {
+    animation: brillo-constelacion 6.8s ease-in-out 1.3s infinite;
+}
+
+.estrellas-principales circle:nth-child(3) {
+    animation: brillo-constelacion 5.9s ease-in-out 2.1s infinite;
+}
+
+.estrellas-principales circle:nth-child(4) {
+    animation: brillo-constelacion 7.4s ease-in-out 0.7s infinite;
+}
+
+.estrellas-principales circle:nth-child(5) {
+    animation: brillo-constelacion 6.3s ease-in-out 2.8s infinite;
+}
+
+.estrellas-principales circle:nth-child(6) {
+    animation: brillo-constelacion 7.1s ease-in-out 1.7s infinite;
+}
+
+.estrellas-principales circle:nth-child(7) {
+    animation: brillo-constelacion 5.6s ease-in-out 3.2s infinite;
+}
+
+.estrellas-principales circle:nth-child(8) {
+    animation: brillo-constelacion 7.7s ease-in-out 0.9s infinite;
+}
+
+.estrellas-principales circle:nth-child(9) {
+    animation: brillo-constelacion 6.6s ease-in-out 3.7s infinite;
+}
+
+/* ESTRELLAS GRANDES: tercer grupo SVG */
+
+.dibujo-constelacion > g:nth-of-type(3) path:nth-child(1) {
+    animation: brillo-constelacion 6.2s ease-in-out 0.4s infinite;
+}
+
+.dibujo-constelacion > g:nth-of-type(3) path:nth-child(2) {
+    animation: brillo-constelacion 7.8s ease-in-out 2.2s infinite;
+}
+
+.dibujo-constelacion > g:nth-of-type(3) path:nth-child(3) {
+    animation: brillo-constelacion 6.9s ease-in-out 4s infinite;
+}
+
+/* ESTRELLAS MEDIANAS: cuarto grupo SVG */
+
+.dibujo-constelacion > g:nth-of-type(4) path:nth-child(1) {
+    animation: brillo-constelacion 7.2s ease-in-out 1.1s infinite;
+}
+
+.dibujo-constelacion > g:nth-of-type(4) path:nth-child(2) {
+    animation: brillo-constelacion 8.3s ease-in-out 3.1s infinite;
+}
+
+.dibujo-constelacion > g:nth-of-type(4) path:nth-child(3) {
+    animation: brillo-constelacion 7.6s ease-in-out 4.6s infinite;
+}
+
+/* ESTRELLAS PEQUEÑAS: algunas brillan, otras permanecen tenues */
+
+.estrellas-pequenas circle:nth-child(3n) {
+    animation: brillo-constelacion 8.2s ease-in-out 1.4s infinite;
+}
+
+.estrellas-pequenas circle:nth-child(3n + 1) {
+    animation: brillo-constelacion 9.1s ease-in-out 3.6s infinite;
+}
+
+/* DESTELLOS DECORATIVOS EXTERIORES: conservar su posición original */
+
+.destello-espacial,
+.destello-secundario {
+    position: absolute;
+    color: #e7c36b;
+    text-shadow: 0 0 8px rgba(231, 195, 107, 0.65);
+}
+
+.destello-espacial {
+    top: 12%;
+    left: 12%;
+    font-size: 23px;
+    animation: brillo-constelacion 6.4s ease-in-out 1.8s infinite;
+}
+
+.destello-secundario {
+    right: 12%;
+    bottom: 22%;
+    font-size: 27px;
+    animation: brillo-constelacion 8.1s ease-in-out 3.4s infinite;
+}
+
+/* BRILLO MÁS SUAVE, SIN CAMBIAR LOS COLORES NI TAMAÑOS */
+
+.lineas-doradas {
+    filter: drop-shadow(0 0 2px rgba(231, 195, 107, 0.4));
+}
+
+.estrellas-principales {
+    filter: drop-shadow(0 0 4px rgba(231, 195, 107, 0.55));
+}
+
+.destellos-dorados {
+    filter: drop-shadow(0 0 2px rgba(231, 195, 107, 0.4));
+}
+
+.estrellas-pequenas {
+    filter: drop-shadow(0 0 2px rgba(231, 195, 107, 0.3));
+}
+
+.luna-dorada {
+    filter: drop-shadow(0 0 4px rgba(231, 195, 107, 0.45));
+}
+
+/* =========================================
+   TEXTO SOBRE MÍ
+========================================= */
+
+.contenido-sobre-mi {
+    flex: 1;
+}
+
+.subtitulo-sobre-mi {
+    color: var(--color-lavanda);
+    font-size: 14px;
+    font-weight: 600;
+    letter-spacing: 3px;
+}
+
+.contenido-sobre-mi h2 {
+    color: var(--color-blanco);
+    font-size: 38px;
+    font-weight: 700;
+    margin: 12px 0 25px;
+}
+
+.contenido-sobre-mi p {
+    color: #d0c7df;
+    font-size: 16px;
+    line-height: 1.9;
+    margin-bottom: 18px;
+}
+
+/* =========================================
+   ADAPTACIÓN A CELULARES
+========================================= */
+
+@media (max-width: 767px) {
+
+    .tarjeta-sobre-mi {
+        flex-direction: column;
+        padding: 25px;
+        gap: 30px;
+    }
+
+    .ilustracion-espacial {
+        width: 100%;
+        min-height: 260px;
+    }
+
+    .constelacion-leo {
+        min-height: 260px;
+    }
+
+    .dibujo-constelacion {
+        height: 230px;
+    }
+
+    .contenido-sobre-mi h2 {
+        font-size: 30px;
+    }
+}
+
+/* =========================================
+   FIN SECCIÓN SOBRE MÍ
+========================================= */
+
+
+/* =========================================
+   SECCIÓN HABILIDADES
+========================================= */
+
+.seccion-habilidades {
+    padding: 0 0 60px;
+    margin-top: -25px;
+}
+
+.tarjeta-habilidades {
+    padding: 18px 25px 12px;
+    background: rgba(35, 22, 67, 0.85);
+    border: 1px solid rgba(189, 99, 245, 0.45);
+    border-radius: 25px;
+    box-shadow: 0 0 25px rgba(189, 99, 245, 0.12);
+}
+
+/* ENCABEZADO */
+
+.encabezado-habilidades {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 20px;
+    margin-bottom: 15px;
+}
+
+.titulo-habilidades {
+    display: flex;
+    align-items: center;
+    gap: 15px;
+}
+
+.icono-habilidades {
+    color: var(--color-lavanda);
+    font-size: 38px;
+    font-weight: bold;
+}
+
+.subtitulo-habilidades {
+    color: var(--color-lavanda);
+    font-size: 12px;
+    font-weight: 600;
+}
+
+.titulo-habilidades h2 {
+    color: white;
+    font-size: 25px;
+    font-weight: 700;
+    margin: 0;
+}
+
+.descripcion-habilidades {
+    color: white;
+    background: rgba(189, 99, 245, 0.4);
+    border: 1px solid rgba(189, 99, 245, 0.5);
+    border-radius: 25px;
+    padding: 7px 20px;
+    font-size: 12px;
+}
+
+/* TARJETAS DE TECNOLOGÍAS */
+
+.lista-habilidades {
+    display: grid;
+    grid-template-columns: repeat(10, minmax(0, 1fr));
+    gap: 12px;
+}
+
+.habilidad {
+    min-height: 85px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap: 5px;
+    padding: 8px 4px;
+    background: linear-gradient(
+        145deg,
+        rgba(93, 49, 139, 0.65),
+        rgba(30, 19, 57, 0.95)
+    );
+    border: 1px solid rgba(189, 99, 245, 0.55);
+    border-radius: 15px;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.2);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.habilidad i {
+    font-size: 30px;
+}
+
+.habilidad span {
+    color: white;
+    font-size: 12px;
+    text-align: center;
+}
+
+.habilidad:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 0 15px rgba(189, 99, 245, 0.35);
+}
+
+/* TABLET */
+
+@media (max-width: 991px) {
+    .lista-habilidades {
+        grid-template-columns: repeat(5, 1fr);
+    }
+}
+
+/* CELULAR */
+
+@media (max-width: 576px) {
+    .tarjeta-habilidades {
+        padding: 20px 15px;
+    }
+
+    .encabezado-habilidades {
+        flex-direction: column;
+        align-items: flex-start;
+    }
+
+    .titulo-habilidades h2 {
+        font-size: 22px;
+    }
+
+    .descripcion-habilidades {
+        font-size: 11px;
+    }
+
+    .lista-habilidades {
+        grid-template-columns: repeat(2, 1fr);
+    }
+}
+
+
+/* =========================================
+   EXPERIENCIA PROFESIONAL Y FORMACIÓN
+========================================= */
+
+.seccion-trayectoria {
+    padding: 15px 0 55px;
+}
+
+.fila-trayectoria {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 18px;
+}
+
+/* TARJETAS PRINCIPALES */
+
+.tarjeta-trayectoria {
+    padding: 22px 25px 18px;
+    background: rgba(35, 22, 67, 0.85);
+    border: 1px solid rgba(189, 99, 245, 0.45);
+    border-radius: 25px;
+    box-shadow: 0 0 25px rgba(189, 99, 245, 0.12);
+}
+
+/* ENCABEZADOS */
+
+.encabezado-trayectoria {
+    display: flex;
+    align-items: center;
+    gap: 18px;
+    margin-bottom: 15px;
+}
+
+.icono-trayectoria {
+    color: var(--color-lavanda);
+    font-size: 36px;
+}
+
+.subtitulo-trayectoria {
+    color: var(--color-lavanda);
+    font-size: 12px;
+    font-weight: 600;
+}
+
+.encabezado-trayectoria h2 {
+    color: white;
+    font-size: 23px;
+    font-weight: 700;
+    margin: 0;
+}
+
+/* CONTENIDO DE EXPERIENCIA */
+
+.contenido-trayectoria {
+    display: flex;
+    align-items: center;
+    gap: 22px;
+    padding: 15px;
+    background: linear-gradient(
+        145deg,
+        rgba(103, 58, 150, 0.65),
+        rgba(35, 22, 67, 0.95)
+    );
+    border: 1px solid rgba(189, 99, 245, 0.3);
+    border-radius: 18px;
+    box-shadow: 0 0 15px rgba(189, 99, 245, 0.12);
+}
+
+.icono-detalle {
+    flex-shrink: 0;
+    color: var(--color-lavanda);
+    font-size: 42px;
+}
+
+.texto-trayectoria h3,
+.elemento-formacion h3 {
+    color: white;
+    font-size: 15px;
+    font-weight: 700;
+    margin-bottom: 3px;
+}
+
+.dato-trayectoria {
+    display: block;
+    color: #d0c7df;
+    font-size: 12px;
+    margin-bottom: 8px;
+}
+
+.texto-trayectoria ul {
+    padding-left: 17px;
+    margin: 0;
+}
+
+.texto-trayectoria li {
+    color: #e5d8f5;
+    font-size: 12px;
+    line-height: 1.7;
+}
+
+/* FORMACIÓN */
+
+.lista-formacion {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+}
+
+.elemento-formacion {
+    display: flex;
+    align-items: center;
+    gap: 22px;
+    min-height: 65px;
+    padding: 12px 18px;
+    background: linear-gradient(
+        145deg,
+        rgba(103, 58, 150, 0.65),
+        rgba(35, 22, 67, 0.95)
+    );
+    border: 1px solid rgba(189, 99, 245, 0.3);
+    border-radius: 17px;
+    box-shadow: 0 0 15px rgba(189, 99, 245, 0.12);
+}
+
+.elemento-formacion .icono-detalle {
+    font-size: 38px;
+}
+
+.elemento-formacion p {
+    color: #e5d8f5;
+    font-size: 12px;
+    line-height: 1.5;
+    margin: 0;
+}
+
+/* TABLETS */
+
+@media (max-width: 991px) {
+    .fila-trayectoria {
+        grid-template-columns: 1fr;
+    }
+}
+
+/* CELULARES */
+
+@media (max-width: 576px) {
+    .tarjeta-trayectoria {
+        padding: 20px 15px;
+    }
+
+    .encabezado-trayectoria h2 {
+        font-size: 20px;
+    }
+
+    .contenido-trayectoria {
+        gap: 12px;
+        padding: 12px;
+    }
+
+    .icono-detalle {
+        font-size: 32px;
+    }
+
+    .texto-trayectoria h3,
+    .elemento-formacion h3 {
+        font-size: 13px;
+    }
+}
+
+
+/* =========================================
+   SECCIÓN PROYECTOS
+========================================= */
+
+.seccion-proyectos {
+    padding: 55px 0 70px;
+}
+
+.encabezado-proyectos {
+    text-align: center;
+    margin-bottom: 30px;
+}
+
+.subtitulo-proyectos {
+    color: var(--color-lavanda);
+    font-size: 12px;
+    font-weight: 600;
+    letter-spacing: 3px;
+}
+
+.encabezado-proyectos h2 {
+    color: white;
+    font-size: 32px;
+    font-weight: 700;
+    margin: 10px 0;
+}
+
+.encabezado-proyectos p {
+    color: #d0c7df;
+    font-size: 14px;
+}
+
+.fila-proyectos {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 25px;
+}
+
+.tarjeta-proyecto {
+    overflow: hidden;
+    background: rgba(35, 22, 67, 0.85);
+    border: 1px solid rgba(189, 99, 245, 0.45);
+    border-radius: 22px;
+    box-shadow: 0 0 25px rgba(189, 99, 245, 0.12);
+    transition: transform 0.3s ease;
+}
+
+.tarjeta-proyecto:hover {
+    transform: translateY(-5px);
+}
+
+/* IMÁGENES */
+
+.imagen-proyecto {
+    min-height: 190px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: relative;
+    overflow: hidden;
+}
+
+.imagen-proyecto span {
+    color: white;
+    font-size: 28px;
+    font-weight: 700;
+    text-shadow: 0 2px 12px rgba(0, 0, 0, 0.6);
+}
+
+.imagen-bipbip {
+    background: linear-gradient(135deg, #2f717d, #9acadb);
+}
+
+.imagen-hackashoes {
+    background: linear-gradient(135deg, #2d4059, #ea5455);
+}
+
+/* INFORMACIÓN */
+
+.contenido-proyecto {
+    padding: 22px;
+}
+
+.contenido-proyecto h3 {
+    color: white;
+    font-size: 21px;
+    font-weight: 700;
+    margin-bottom: 10px;
+}
+
+.contenido-proyecto p {
+    color: #d0c7df;
+    font-size: 14px;
+    line-height: 1.7;
+}
+
+/* TECNOLOGÍAS */
+
+.tecnologias-proyecto {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 8px;
+    margin: 18px 0;
+}
+
+.tecnologias-proyecto span {
+    color: var(--color-lavanda);
+    background: rgba(189, 99, 245, 0.15);
+    border: 1px solid rgba(189, 99, 245, 0.35);
+    border-radius: 20px;
+    padding: 5px 11px;
+    font-size: 11px;
+}
+
+/* ENLACE */
+
+.enlace-proyecto {
+    color: var(--color-lavanda);
+    font-size: 14px;
+    font-weight: 600;
+}
+
+.enlace-proyecto:hover {
+    color: white;
+}
+
+/* RESPONSIVE */
+
+@media (max-width: 767px) {
+    .fila-proyectos {
+        grid-template-columns: 1fr;
+    }
+
+    .encabezado-proyectos h2 {
+        font-size: 27px;
+    }
+}
+
+
+/* ================= SECCIÓN CONTACTO ================= */
+
+.seccion-contacto {
+    padding: 20px 0 60px;
+}
+
+.barra-contacto {
+    display: grid;
+    grid-template-columns: 1fr 1.5fr 1fr;
+    align-items: center;
+    gap: 25px;
+    padding: 20px 35px;
+    background: rgba(189, 99, 245, 0.09);
+    border: 1px solid rgba(189, 99, 245, 0.55);
+    border-radius: 20px;
+    box-shadow: 0 0 15px rgba(189, 99, 245, 0.15);
+}
+
+.titulo-contacto {
+    display: flex;
+    align-items: center;
+    gap: 20px;
+    border-right: 1px solid var(--color-lavanda);
+}
+
+.titulo-contacto > i {
+    color: var(--color-lavanda);
+    font-size: 42px;
+}
+
+.titulo-contacto span {
+    color: var(--color-lavanda);
+    font-size: 12px;
+    font-weight: bold;
+}
+
+.titulo-contacto h2 {
+    color: var(--color-blanco);
+    font-size: 27px;
+    margin: 2px 0;
+}
+
+.mensaje-contacto {
+    border-right: 1px solid var(--color-lavanda);
+    padding: 0 20px;
+}
+
+.mensaje-contacto p {
+    color: var(--color-blanco);
+    margin: 3px 0;
+    font-size: 14px;
+}
+
+.redes-contacto {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 25px;
+}
+
+.redes-contacto a {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 43px;
+    height: 43px;
+    color: var(--color-blanco);
+    background: rgba(189, 99, 245, 0.15);
+    border: 1px solid rgba(189, 99, 245, 0.4);
+    border-radius: 12px;
+    font-size: 23px;
+    text-decoration: none;
+    transition: 0.3s;
+}
+
+.redes-contacto a:hover {
+    color: var(--color-blanco);
+    background: var(--color-violeta);
+    transform: translateY(-4px);
+}
+
+/* RESPONSIVE */
+
+@media (max-width: 768px) {
+    .barra-contacto {
+        grid-template-columns: 1fr;
+        gap: 20px;
+        text-align: center;
+    }
+
+    .titulo-contacto,
+    .mensaje-contacto {
+        justify-content: center;
+        border-right: none;
+        padding: 0;
+    }
+
+    .redes-contacto {
+        justify-content: center;
+    }
+}
+
+
+/* ================= PAISAJE NOCTURNO ================= */
+
+.paisaje-nocturno {
+    width: 100%;
+    overflow: hidden;
+    line-height: 0;
+    margin-top: 0;
+}
+
+
+/* DIFUMINAR LOS BORDES DEL PAISAJE */
+
+
+/* PAISAJE NOCTURNO INTEGRADO AL FONDO */
+
+.paisaje-nocturno img {
+    display: block;
+    width: 100%;
+    height: 190px;
+    object-fit: cover;
+    object-position: center 55%;
+
+    /* Colores más suaves */
+    filter: brightness(0.62) saturate(0.48) contrast(0.90);
+    opacity: 0.88;
+
+    /* Difuminar los bordes */
+    -webkit-mask-image: linear-gradient(
+        to bottom,
+        transparent 0%,
+        rgba(0, 0, 0, 0.55) 15%,
+        #000000 35%,
+        #000000 75%,
+        transparent 100%
+    );
+
+    mask-image: linear-gradient(
+        to bottom,
+        transparent 0%,
+        rgba(0, 0, 0, 0.55) 15%,
+        #000000 35%,
+        #000000 75%,
+        transparent 100%
+    );
+}
+
+
+/* ================= FOOTER ================= */
+
+.footer-portafolio {
+    background: rgba(16, 13, 41, 0.95);
+    border-top: 1px solid rgba(189, 99, 245, 0.5);
+    padding: 22px 4%;
+}
+
+.contenido-footer {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 20px;
+}
+
+.marca-footer {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+    color: var(--color-blanco);
+}
+
+.marca-footer i {
+    color: var(--color-violeta);
+    font-size: 27px;
+}
+
+.contenido-footer p {
+    color: var(--color-blanco);
+    margin: 0;
+    text-align: center;
+    font-size: 14px;
+}
+
+.iconos-footer {
+    display: flex;
+    align-items: center;
+    gap: 20px;
+    color: var(--color-violeta);
+    font-size: 23px;
+}
+
+/* RESPONSIVE */
+
+@media (max-width: 768px) {
+    .contenido-footer {
+        flex-direction: column;
+        text-align: center;
+    }
+}
+/* AJUSTE DE NAVEGACIÓN CON MENÚ FIJO */
+
+#habilidades {
+    scroll-margin-top: 340px;
+}
+
+#experiencia,
+#formacion {
+    scroll-margin-top: 100px;
+}
+
+
+/* =========================================
+   TEMA CLARO
+========================================= */
+
+body.tema-claro {
+    background-color: #f7f3fc;
+    color: #302344;
+}
+
+/* BARRA DE NAVEGACIÓN */
+
+body.tema-claro .navbar-portfolio {
+    background: rgba(255, 255, 255, 0.97);
+    border-bottom: 1px solid #d8b8f2;
+}
+
+body.tema-claro .brand-name,
+body.tema-claro .navbar-portfolio .nav-link {
+    color: #302344;
+}
+
+body.tema-claro .brand-divider,
+body.tema-claro .brand-subtitle {
+    color: #725b88;
+}
+
+/* FONDO DE LAS SECCIONES */
+
+body.tema-claro .seccion-presentacion {
+    background: #f7f3fc;
+}
+
+body.tema-claro .seccion-sobre-mi,
+body.tema-claro .seccion-habilidades,
+body.tema-claro .seccion-trayectoria,
+body.tema-claro .seccion-proyectos,
+body.tema-claro .seccion-contacto {
+    background-color: #f7f3fc;
+}
+
+/* TARJETAS PRINCIPALES */
+
+body.tema-claro .tarjeta-sobre-mi,
+body.tema-claro .tarjeta-habilidades,
+body.tema-claro .tarjeta-trayectoria,
+body.tema-claro .tarjeta-proyecto,
+body.tema-claro .barra-contacto {
+    background: #ffffff;
+    border-color: #d8b8f2;
+    box-shadow: 0 0 20px rgba(120, 75, 160, 0.10);
+}
+
+/* TEXTOS Y TÍTULOS */
+
+body.tema-claro .contenido-sobre-mi h2,
+body.tema-claro .titulo-habilidades h2,
+body.tema-claro .encabezado-trayectoria h2,
+body.tema-claro .encabezado-proyectos h2,
+body.tema-claro .contenido-proyecto h3,
+body.tema-claro .titulo-contacto h2 {
+    color: #302344;
+}
+
+body.tema-claro .contenido-sobre-mi p,
+body.tema-claro .encabezado-proyectos p,
+body.tema-claro .contenido-proyecto p,
+body.tema-claro .mensaje-contacto p,
+body.tema-claro .texto-trayectoria li,
+body.tema-claro .dato-trayectoria,
+body.tema-claro .elemento-formacion p {
+    color: #62536f;
+}
+
+/* TARJETAS DE HABILIDADES */
+
+body.tema-claro .habilidad {
+    background: linear-gradient(145deg, #f1e5fc, #ffffff);
+    border-color: #d8b8f2;
+}
+
+body.tema-claro .habilidad span {
+    color: #302344;
+}
+
+/* EXPERIENCIA Y FORMACIÓN */
+
+body.tema-claro .contenido-trayectoria,
+body.tema-claro .elemento-formacion {
+    background: #f3eafb;
+    border-color: #dfc4f3;
+}
+
+/* CONTACTO */
+
+body.tema-claro .redes-contacto a {
+    color: #70409b;
+    background: #f1e5fc;
+    border-color: #d8b8f2;
+}
+
+/* BOTÓN DE TEMA */
+
+body.tema-claro .theme-toggle {
+    background: #eadcf8;
+    color: #70409b;
+}
+
+/* FOOTER */
+
+body.tema-claro .footer-portafolio {
+    background: #eee5f7;
+    border-top-color: #d8b8f2;
+}
+
+body.tema-claro .marca-footer,
+body.tema-claro .contenido-footer p {
+    color: #302344;
+}
+
+/* ENLACES DE PROYECTOS */
+
+body.tema-claro .enlace-proyecto {
+    color: #8145b5;
+}
+
+/* =========================================
+   AJUSTES DEL HERO EN TEMA CLARO
+========================================= */
+
+body.tema-claro .seccion-presentacion {
+    background:
+        radial-gradient(
+            circle at 80% 45%,
+            rgba(189, 99, 245, 0.12),
+            transparent 38%
+        ),
+        #f7f3fc;
+}
+
+body.tema-claro .contenido-presentacion h1 {
+    color: #302344;
+}
+
+body.tema-claro .contenido-presentacion h2 {
+    color: #62477d;
+}
+
+body.tema-claro .subtitulo-presentacion {
+    color: #9145bd;
+}
+
+body.tema-claro .descripcion-presentacion {
+    color: #62536f;
+}
+
+body.tema-claro .redes-sociales a {
+    color: #70409b;
+}
+
+body.tema-claro .btn-outline-custom {
+    color: #8145b5;
+    border-color: #a85bdb;
+}
+
+body.tema-claro .btn-outline-custom:hover {
+    background-color: #bd63f5;
+    color: #ffffff;
+}
+
+
+/* =========================================
+   IMÁGENES DIFUMINADAS EN TEMA CLARO
+========================================= */
+
+/* LAPTOP Y GATITO */
+
+body.tema-claro .imagen-presentacion {
+    background: none;
+}
+
+body.tema-claro .imagen-presentacion img {
+    filter: none;
+    border: none;
+    box-shadow: none;
+
+    -webkit-mask-image: radial-gradient(
+        ellipse 85% 85% at center,
+        #000 48%,
+        rgba(0, 0, 0, 0.85) 65%,
+        rgba(0, 0, 0, 0.35) 85%,
+        transparent 100%
+    );
+
+    mask-image: radial-gradient(
+        ellipse 85% 85% at center,
+        #000 48%,
+        rgba(0, 0, 0, 0.85) 65%,
+        rgba(0, 0, 0, 0.35) 85%,
+        transparent 100%
+    );
+}
+
+/* CONSTELACIÓN */
+
+body.tema-claro .ilustracion-espacial {
+    box-shadow: none;
+}
+
+/* PAISAJE NOCTURNO */
+
+body.tema-claro .paisaje-nocturno img {
+    -webkit-mask-image: linear-gradient(
+        to bottom,
+        transparent 0%,
+        #000 25%,
+        #000 75%,
+        transparent 100%
+    );
+
+    mask-image: linear-gradient(
+        to bottom,
+        transparent 0%,
+        #000 25%,
+        #000 75%,
+        transparent 100%
+    );
+}
+
+/* TARJETAS DE PROYECTOS */
+
+body.tema-claro .tarjeta-proyecto {
+    box-shadow: 0 8px 22px rgba(91, 48, 130, 0.10);
+}
+
+
+/* =========================================
+   CIELO ESTRELLADO EN TODO EL PORTAFOLIO
+========================================= */
+
+body:not(.tema-claro) .seccion-sobre-mi,
+body:not(.tema-claro) .seccion-habilidades,
+body:not(.tema-claro) .seccion-trayectoria,
+body:not(.tema-claro) .seccion-proyectos,
+body:not(.tema-claro) .seccion-contacto {
+    position: relative;
+}
+
+/* ESTRELLAS DEL FONDO */
+
+body:not(.tema-claro) .seccion-sobre-mi::before,
+body:not(.tema-claro) .seccion-habilidades::before,
+body:not(.tema-claro) .seccion-trayectoria::before,
+body:not(.tema-claro) .seccion-proyectos::before,
+body:not(.tema-claro) .seccion-contacto::before {
+    content: "";
+    position: absolute;
+    inset: 0;
+    pointer-events: none;
+    z-index: 0;
+
+    background-image:
+        radial-gradient(circle, #ffffff 1px, transparent 2px),
+        radial-gradient(circle, #bd63f5 1.5px, transparent 3px),
+        radial-gradient(circle, #e5a4ff 1px, transparent 2px),
+        radial-gradient(circle, #ffffff 1.5px, transparent 3px);
+
+    background-size:
+        180px 150px,
+        230px 190px,
+        280px 220px,
+        350px 270px;
+
+    background-position:
+        20px 30px,
+        90px 100px,
+        150px 50px,
+        40px 180px;
+
+    opacity: 0.55;
+
+    animation: movimiento-estrellas-secciones 45s linear infinite;
+}
+
+/* MANTENER EL CONTENIDO SOBRE LAS ESTRELLAS */
+
+body:not(.tema-claro) .seccion-sobre-mi > .container,
+body:not(.tema-claro) .seccion-habilidades > .container,
+body:not(.tema-claro) .seccion-trayectoria > .container,
+body:not(.tema-claro) .seccion-proyectos > .container,
+body:not(.tema-claro) .seccion-contacto > .container {
+    position: relative;
+    z-index: 1;
+}
+
+/* MOVIMIENTO DE LAS ESTRELLAS */
+
+@keyframes movimiento-estrellas-secciones {
+    from {
+        background-position:
+            20px 30px,
+            90px 100px,
+            150px 50px,
+            40px 180px;
+    }
+
+    to {
+        background-position:
+            200px 180px,
+            320px 290px,
+            430px 270px,
+            390px 450px;
+    }
+}
+
+/* =========================================
+   ESTRELLAS EN EL TEMA CLARO
+========================================= */
+
+body.tema-claro .seccion-sobre-mi,
+body.tema-claro .seccion-habilidades,
+body.tema-claro .seccion-trayectoria,
+body.tema-claro .seccion-proyectos,
+body.tema-claro .seccion-contacto {
+    position: relative;
+}
+
+/* PUNTOS ESTELARES */
+
+body.tema-claro .seccion-sobre-mi::before,
+body.tema-claro .seccion-habilidades::before,
+body.tema-claro .seccion-trayectoria::before,
+body.tema-claro .seccion-proyectos::before,
+body.tema-claro .seccion-contacto::before {
+    content: "";
+    position: absolute;
+    inset: 0;
+    z-index: 0;
+    pointer-events: none;
+
+    background-image:
+        radial-gradient(circle, #8751b5 1.5px, transparent 2.5px),
+        radial-gradient(circle, #b47cdb 2px, transparent 3px),
+        radial-gradient(circle, #70439c 1px, transparent 2px),
+        radial-gradient(circle, #d0a8ec 1.5px, transparent 2.5px);
+
+    background-size:
+        180px 150px,
+        230px 190px,
+        280px 220px,
+        350px 270px;
+
+    background-position:
+        20px 30px,
+        90px 100px,
+        150px 50px,
+        40px 180px;
+
+    opacity: 0.65;
+
+    animation: movimiento-estrellas-secciones 45s linear infinite;
+}
+
+/* CONTENIDO POR ENCIMA DE LAS ESTRELLAS */
+
+body.tema-claro .seccion-sobre-mi > .container,
+body.tema-claro .seccion-habilidades > .container,
+body.tema-claro .seccion-trayectoria > .container,
+body.tema-claro .seccion-proyectos > .container,
+body.tema-claro .seccion-contacto > .container {
+    position: relative;
+    z-index: 1;
+}
